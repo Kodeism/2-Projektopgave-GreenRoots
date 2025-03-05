@@ -1,4 +1,4 @@
-﻿//Opgave 1
+//Opgave 1
 int produktid = 1;
 string produkt1Navn = "Bambus tandbørste";
 string produkt1Kategori = "Bad";
@@ -89,11 +89,11 @@ for (int dagNr = 1; dagNr <= antal_dage; dagNr++) //SåLænge(x;er lavere end el
 
     //Her bruger vi vores tidligere metode 'BeregnOmsætning' til at beregne vores omsætning
     //baseret på de daglige salg som vi har simuleret ovenfor
-    double om1 = BeregnOmsætning(produkt1Pris, produkt1AntalSolgt);
-    double om2 = BeregnOmsætning(produkt2Pris, produkt2AntalSolgt);
-    double om3 = BeregnOmsætning(produkt3Pris, produkt3AntalSolgt);
-    double om4 = BeregnOmsætning(produkt4Pris, produkt4AntalSolgt);
-    double om5 = BeregnOmsætning(produkt5Pris, produkt5AntalSolgt);
+    double om1 = BeregnOmsætning(produkt1Pris, produkt1DagligtSalg);
+    double om2 = BeregnOmsætning(produkt2Pris, produkt2DagligtSalg);
+    double om3 = BeregnOmsætning(produkt3Pris, produkt3DagligtSalg);
+    double om4 = BeregnOmsætning(produkt4Pris, produkt4DagligtSalg);
+    double om5 = BeregnOmsætning(produkt5Pris, produkt5DagligtSalg);
 
     //så bruger vi += til at tilføje alle vores omsætninger til vores totale omsætning
     //da vi bruger += tilføjes hver iterations omsætninger til det totale
@@ -110,11 +110,12 @@ for (int dagNr = 1; dagNr <= antal_dage; dagNr++) //SåLænge(x;er lavere end el
     Console.WriteLine($"Dag {dagNr}; Omsætningen for {produkt5Navn} blev: {om5} ({KategoriserOmsætning(om5)})");
     Console.WriteLine($"Dag {dagNr}; Den totale omsætning blev: {totalOmsætning}");
     /*Output på dag 1: 
-    Dag 1; Omsætningen for Bambus tandbørste blev: 9477 (Lav omsætning)
-    Dag 1; Omsætningen for Genanvendelig kaffefilter blev: 27606 (Mellem omsætning)
-    Dag 1; Omsætningen for Bioplast Affaldsposer blev: 15088,32 (Mellem omsætning)
-    Dag 1; Omsætningen for Mulepose blev: 4110 (Lav omsætning)
-    Dag 1; Omsætningen for T-shirt øko-bomuld blev: 101400 (Høj omsætning)
-    Dag 1; Den totale omsætning blev: 157681,32
+    Dag 1; Omsætningen for Bambus tandbørste blev: 1365 (Lav omsætning)
+    Dag 1; Omsætningen for Genanvendelig kaffefilter blev: 3999 (Lav omsætning)
+    Dag 1; Omsætningen for Bioplast Affaldsposer blev: 2171,52 (Lav omsætning)
+    Dag 1; Omsætningen for Mulepose blev: 600 (Lav omsætning)
+    Dag 1; Omsætningen for T-shirt øko-bomuld blev: 14600 (Mellem omsætning)
+    Dag 1; Den totale omsætning blev: 22735,52
     */
+}
 }
