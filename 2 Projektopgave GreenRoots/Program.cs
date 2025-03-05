@@ -48,7 +48,6 @@ static string KategoriserOmsætning(double omsætning)
     {
         return "Mellem omsætning";
     }
-
     return "Høj omsætning";
 
 }
