@@ -32,3 +32,24 @@ string produkt5Kategori = "Hobby";
 double produkt5Pris = 200.0;
 string produkt5Miljømærke = "Ingen";
 int produkt5AntalSolgt = 507;
+
+static double BeregnOmsætning(double pris, int antalSolgt)
+{
+    return (double)pris * antalSolgt;
+}
+
+static string KategoriserOmsætning(double omsætning)
+{
+    if(omsætning<10000)
+    {
+        return "Lav omsætning";
+    }
+    else if(omsætning>=10000 && omsætning<50000)
+    {
+        return "Mellem omsætning";
+    }
+
+    return "Høj omsætning";
+
+}
+
