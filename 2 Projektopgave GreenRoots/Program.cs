@@ -1,4 +1,26 @@
-﻿int produktid = 1;
+﻿//     output     programnavn(input  navn,  input navn)
+static double BeregnOmsætning(double pris, int antalSolgt) //input er en double (et kommatal) for prisen
+                                                           //og en int (et heltal) for salgs mængden
+{
+    return (double)pris * antalSolgt; //den outputter (returner) et kommatal som er omsætningen på varen
+}
+
+
+static string KategoriserOmsætning(double omsætning) //input er en double (kommatal) for omsætningen af en vare
+{
+    if (omsætning < 10000) //hvis omsætningen er under 10.000:
+    {
+        return "Lav omsætning"; //Så bliver outputtet (return) til stringen (teksten) "Lav omsætning"
+    }
+    else if (omsætning < 50000) //hvis den ikke er under 10.000 men er under 50.000 så outputter vi "Mellem omsætning"
+    {
+        return "Mellem omsætning";
+    }
+    return "Høj omsætning"; //hvis den er højere end 10.000 og 50.000 så outputter vi "Høj omsætning"   
+}
+
+
+int produktid = 1;
 string produkt1Navn = "Bambus tandbørste";
 string produkt1Kategori = "Bad";
 double produkt1Pris = 39.0;
@@ -33,22 +55,8 @@ double produkt5Pris = 200.0;
 string produkt5Miljømærke = "Ingen";
 int produkt5AntalSolgt = 507;
 
-static double BeregnOmsætning(double pris, int antalSolgt)
-{
-    return (double)pris * antalSolgt;
-}
-
-static string KategoriserOmsætning(double omsætning)
-{
-    if(omsætning<10000)
-    {
-        return "Lav omsætning";
-    }
-    else if(omsætning>=10000 && omsætning<50000)
-    {
-        return "Mellem omsætning";
-    }
-    return "Høj omsætning";
-
-}
-
+//prøver lige at beregne produkt 4s omsætning
+double omsætning = BeregnOmsætning(produkt4Pris, produkt4AntalSolgt);
+//så prøver vi lige at kategorisere det
+string omk = KategoriserOmsætning(omsætning);
+Console.WriteLine(omk); //output: "Lav Omsætning"
