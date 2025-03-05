@@ -1,4 +1,4 @@
-﻿//     output     programnavn(input  navn,  input navn)
+﻿//     output     programnavn(input  navn, input navn)
 static double BeregnOmsætning(double pris, int antalSolgt) //input er en double (et kommatal) for prisen
                                                            //og en int (et heltal) for salgs mængden
 {
@@ -12,11 +12,13 @@ static string KategoriserOmsætning(double omsætning) //input er en double (kom
     {
         return "Lav omsætning"; //Så bliver outputtet (return) til stringen (teksten) "Lav omsætning"
     }
-    else if (omsætning < 50000) //hvis den ikke er under 10.000 men er under 50.000 så outputter vi "Mellem omsætning"
+    else if (omsætning < 50000) //hvis den ikke er under 10.000 men er under 50.000:
     {
-        return "Mellem omsætning";
+        return "Mellem omsætning"; //så outputter vi "Mellem omsætning"
     }
-    return "Høj omsætning"; //hvis den er højere end 10.000 og 50.000 så outputter vi "Høj omsætning"   
+    //"If all else fails" og den er hverken under 10.000 eller 50.000
+    //så må den være over 50.000 som betyder at vi har en "Høj omsætning" 
+    return "Høj omsætning";    
 }
 
 
