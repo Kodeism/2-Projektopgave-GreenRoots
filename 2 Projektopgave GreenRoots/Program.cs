@@ -16,7 +16,8 @@ static string KategoriserOmsætning(double omsætning) //input er en double (kom
     {
         return "Mellem omsætning"; //så outputter vi "Mellem omsætning"
     }
-    //"If all else fails" og den er hverken under 10.000 eller 50.000
+    //"If all else fails" og den er hverken under 10.000 eller
+    // er under/ligmed 50.000
     //så må den være over 50.000 som betyder at vi har en "Høj omsætning" 
     return "Høj omsætning";    
 }
@@ -59,6 +60,8 @@ int produkt5AntalSolgt = 507;
 
 //prøver lige at beregne produkt 4s omsætning
 double omsætning = BeregnOmsætning(produkt4Pris, produkt4AntalSolgt);
+
 //så prøver vi lige at kategorisere det
 string omk = KategoriserOmsætning(omsætning);
+
 Console.WriteLine(omk); //output: "Lav Omsætning"
